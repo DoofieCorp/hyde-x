@@ -7,7 +7,7 @@
   <!-- Enable responsiveness on mobile devices-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
-  <title>{{ .Site.Params.tagline }}</title>
+  <title>{{ .Title }} | {{ .Site.Params.tagline }}</title>
 
   <!-- CSS -->
   <link rel="stylesheet" href="{{ "/css/poole.css" | relURL }}">
@@ -25,7 +25,7 @@
   <link href="{{ "/favicon.png" | relURL }}" rel="icon">
 
   <!-- RSS -->
-  {{ $siteTitle := .Site.Title }}
+  {{ $siteTitle := .Title }}
   {{ $authorName := .Site.Author.name }}
   {{ with .RSSLink }}<link href="{{ . }}" rel="alternate" type="application/rss+xml" title="{{ $siteTitle }} &middot; {{ $authorName }}" />{{ end }}
 
